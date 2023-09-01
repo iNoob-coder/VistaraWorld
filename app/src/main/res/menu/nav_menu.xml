@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/play"
+        android:title="Play"
+        android:icon="@drawable/icon_play" />
+
+    <item
+        android:id="@+id/cabs"
+        android:title="Cabs"
+        android:icon="@drawable/icon_cab" />
+
+    <item
+        android:id="@+id/hotel"
+        android:title="Hotel"
+        android:icon="@drawable/icon_hotel" />
+
+    <item
+        android:id="@+id/cv_mall"
+        android:title="CV Mall"
+        android:icon="@drawable/icon_cv_mall" />
+
+    <item
+        android:id="@+id/club_vistara"
+        android:title="Club Vistara"
+        android:icon="@drawable/icon_club_vistara" />
+
+</menu>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/play">
+
+    <fragment
+        android:id="@+id/play"
+        android:name="com.example.vistaraworld.fragment.Play"
+        android:label="navigation_play"
+        tools:layout="@layout/fragment_play" />
+    <fragment
+        android:id="@+id/cabs"
+        android:name="com.example.vistaraworld.fragment.Cabs"
+        android:label="navigation_cabs"
+        tools:layout="@layout/fragment_cabs" />
+    <fragment
+        android:id="@+id/hotel"
+        android:name="com.example.vistaraworld.fragment.Hotel"
+        android:label="navigation_hotel"
+        tools:layout="@layout/fragment_hotel" />
+    <fragment
+        android:id="@+id/cv_mall"
+        android:name="com.example.vistaraworld.fragment.CvMall"
+        android:label="navigation_cvMall"
+        tools:layout="@layout/fragment_cv_mall" />
+    <fragment
+        android:id="@+id/club_vistara"
+        android:name="com.example.vistaraworld.fragment.ClubVistara"
+        android:label="navigation_clubVistara"
+        tools:layout="@layout/fragment_club_vistara" />
+</navigation>
