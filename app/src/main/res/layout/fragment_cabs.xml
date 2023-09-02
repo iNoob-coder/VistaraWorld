@@ -10,7 +10,7 @@
         android:layout_height="match_parent"
         android:text="@string/cabs"
         android:textColor="@color/white"
-        android:textSize="16sp"
+        android:textSize="@dimen/s16"
         android:gravity="center"/>
 
 </FrameLayout>

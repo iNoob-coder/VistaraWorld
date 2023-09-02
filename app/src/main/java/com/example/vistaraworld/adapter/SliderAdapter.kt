@@ -7,7 +7,11 @@ import com.bumptech.glide.Glide
 import com.example.vistaraworld.Model.SliderData
 import com.example.vistaraworld.databinding.SliderLayoutBinding
 
-class SliderAdapter(private val sliderList: List<SliderData>): RecyclerView.Adapter<SliderAdapter.ViewHolder>() {
+class SliderAdapter(private val sliderList: List<SliderData>, private val listener: OnItemClicked): RecyclerView.Adapter<SliderAdapter.ViewHolder>() {
+
+    interface OnItemClicked {
+        fun onSliderClicked(title: String)
+    }
 
     class ViewHolder(val binding: SliderLayoutBinding):RecyclerView.ViewHolder(binding.root)
 
@@ -30,6 +34,9 @@ class SliderAdapter(private val sliderList: List<SliderData>): RecyclerView.Adap
 
         Glide.with(holder.itemView.context).load(data.image).into(holder.binding.image)
         holder.binding.title.text = data.title
+        holder.itemView.setOnClickListener {
+            listener.onSliderClicked(data.title)
+        }
     }
 
 

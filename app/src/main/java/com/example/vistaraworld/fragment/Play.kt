@@ -18,7 +18,7 @@ import com.example.vistaraworld.adapter.SubCategoryAdapter
 import com.example.vistaraworld.databinding.FragmentPlayBinding
 import com.example.vistaraworld.databinding.RvSubCategoryLayoutBinding
 
-class Play : Fragment(), CategoryAdapter.CategoryClicked {
+class Play : Fragment(), CategoryAdapter.CategoryClicked, SliderAdapter.OnItemClicked {
 
     private lateinit var binding: FragmentPlayBinding
     private val categoryList = listOf(
@@ -93,7 +93,7 @@ class Play : Fragment(), CategoryAdapter.CategoryClicked {
         super.onViewCreated(view, savedInstanceState)
 
         //set slider
-        binding.slider.adapter = SliderAdapter(sliderList)
+        binding.slider.adapter = SliderAdapter(sliderList, this@Play)
 
         //set indicator
         binding.indicator.setViewPager(binding.slider)
@@ -104,7 +104,7 @@ class Play : Fragment(), CategoryAdapter.CategoryClicked {
                 LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
         }
 
-        //using this method we can set as many list we want
+        //by using this method we can set as many list as we want
         for (i in 0..4) {
             binding.mainLayout.addView(setHorizontalRv(subCategoryList[0]))
             binding.mainLayout.addView(setHorizontalRv(subCategoryList2[0]))
@@ -131,11 +131,14 @@ class Play : Fragment(), CategoryAdapter.CategoryClicked {
                 false
             )
         }
-
         return rvLayout
     }
 
     override fun onCategoryClicked(categoryName: String) {
         Toast.makeText(requireContext(), "$categoryName clicked", Toast.LENGTH_SHORT).show()
+    }
+
+    override fun onSliderClicked(title: String) {
+        Toast.makeText(requireContext(), title, Toast.LENGTH_SHORT).show()
     }
 }

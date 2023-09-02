@@ -21,18 +21,18 @@
 
             <ImageView
                 android:id="@+id/icon_drawer"
-                android:layout_width="50dp"
+                android:layout_width="@dimen/d50"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_vertical"
                 android:contentDescription="@string/icon_drawer"
-                android:paddingHorizontal="10dp"
+                android:paddingHorizontal="@dimen/d10"
                 android:src="@drawable/icon_drawer"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="@dimen/d0"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
                 android:orientation="vertical"
@@ -45,7 +45,7 @@
                     android:gravity="center"
                     android:text="@string/vistara_world"
                     android:textColor="@color/white"
-                    android:textSize="22sp" />
+                    android:textSize="@dimen/s22" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -53,7 +53,7 @@
                     android:gravity="center"
                     android:text="@string/one_platform_for_your_all_travel"
                     android:textColor="@color/white"
-                    android:textSize="14sp" />
+                    android:textSize="@dimen/s14" />
 
 
             </LinearLayout>

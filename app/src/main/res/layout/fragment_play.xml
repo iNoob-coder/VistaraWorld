@@ -17,21 +17,22 @@
             android:id="@+id/rv_category"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="@dimen/d10"
+            android:layout_marginTop="@dimen/d10"
             tools:listitem="@layout/rv_play_category"
             tools:itemCount="1"/>
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/slider"
             android:layout_width="match_parent"
-            android:layout_height="250dp" />
+            android:layout_height="@dimen/d250" />
 
         <me.relex.circleindicator.CircleIndicator3
             android:id="@+id/indicator"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:ci_drawable="@drawable/indicator_color"
-            android:layout_marginTop="5dp" />
+            android:layout_marginTop="@dimen/d5" />
 
     </LinearLayout>
 
