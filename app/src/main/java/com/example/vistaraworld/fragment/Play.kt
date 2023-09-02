@@ -29,6 +29,7 @@ class Play : Fragment(), CategoryAdapter.CategoryClicked, SliderAdapter.OnItemCl
         CategoryData("Audio"),
         CategoryData("Music"),
     )
+    //hello
 
     private val sliderList = listOf(
         SliderData(
